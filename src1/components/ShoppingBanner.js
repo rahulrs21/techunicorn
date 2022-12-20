@@ -54,10 +54,9 @@ function ShoppingBanner(props) {
 
   return (
     <div className="grid grid-cols-3 gap-4 items-start mt-5">
-      
-      <div className="grid col-span-1 mx-4 ">
+      <div className="grid col-span-1 mx-4">
         <div className="relative top-5">
-          <div className="bg-white p-2 border border-gray-500  ">
+          <div className="bg-white p-2 border border-gray-500  hidden md:hidden lg:block">
             <div className="flex justify-between mr-4 ">
               <input
                 type="text"
@@ -74,7 +73,7 @@ function ShoppingBanner(props) {
           </div>
         </div>
 
-        <div className="relative mt-10 space-y-5 hidden md:hidden lg:block">
+        <div className="relative mt-10 space-y-5">
           <h2 className="text-xl md:text-3xl font-bold">Product Categories</h2>
 
           <form action="">
@@ -168,7 +167,7 @@ function ShoppingBanner(props) {
 
         
         
-    </div>
+      </div>
 
       <div className="max-w-7xl col-span-2  grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3  mx-auto bg-gray-100">
         {fake

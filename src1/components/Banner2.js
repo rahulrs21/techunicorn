@@ -36,7 +36,6 @@ function Banner2() {
         </div>
 
         <div className="flex justify-center flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 space-x-5">
-          
           <div className="p-4 md:w-[30%] sm:mb-0 mb-6 bg-white rounded-lg">
             <div className="rounded-lg h-64 overflow-hidden hover:cursor-pointer">
               <img
@@ -64,7 +63,6 @@ function Banner2() {
               </svg>
             </a>
           </div>
-          
           <div className="p-4 md:w-[30%] sm:mb-0 mb-6 bg-white rounded-lg ">
             <div className="rounded-lg h-64 overflow-hidden hover:cursor-pointer">
               <img

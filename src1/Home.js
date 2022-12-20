@@ -12,7 +12,6 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Banner3 from "./components/Banner3";
 
 
 function Home() {
@@ -26,7 +25,6 @@ function Home() {
           <Banner2 />
           
           <Banner4 />
-          <Banner3 />
           
 
       
