@@ -21,7 +21,7 @@ function Checkout() {
     <div className="">
         <div className="flex justify-around items-center mt-2">
             <h1 className="text-md md:text-3xl font-bold text-center my-5 ">{items.length == 0 ? 'Your Basket is Empty' : "Shopping Basket"}</h1>
-            <p>Total Price : <b className="text-lg">{items.length == 0 ? '0' : total}</b></p>
+            <p>Total Price : <b className="text-lg">{items.length == 0 ? '0' : total.toFixed(2)}</b></p>
         </div>
         <div className="flex flex-col justify-center items-center px-12 my-12 space-y-20">
 
