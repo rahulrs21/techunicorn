@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { selectItems } from "./basketSlice";
+import { selectItems, selectTotal } from "./basketSlice";
 import Banner from "./components/Banner";
 import Banner2 from "./components/Banner2";
 import Banner4 from "./components/Banner4";
@@ -14,10 +14,15 @@ import ShoppingBanner from "./components/ShoppingBanner";
 function Checkout() {
 
     const items  = useSelector(selectItems);
+
+    const total = useSelector(selectTotal);
  
   return (
     <div className="">
-        <h1 className="text-3xl font-bold text-center my-5 ">{items.length == 0 ? 'Your Basket is Empty' : "Shopping Basket"}</h1>
+        <div className="flex justify-around items-center mt-2">
+            <h1 className="text-md md:text-3xl font-bold text-center my-5 ">{items.length == 0 ? 'Your Basket is Empty' : "Shopping Basket"}</h1>
+            <p>Total Price : <b className="text-lg">{items.length == 0 ? '0' : total}</b></p>
+        </div>
         <div className="flex flex-col justify-center items-center px-12 my-12 space-y-20">
 
 
