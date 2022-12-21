@@ -55,7 +55,7 @@ function ShoppingBanner(props) {
   return (
     <div className="grid grid-cols-3 gap-4 items-start mt-5">
       
-      <div className="grid col-span-1 mx-4 ">
+      <div className="grid col-span-1 mx-4 justify-center content-center">
         <div className="relative top-5">
           <div className="bg-white p-2 border border-gray-500  ">
             <div className="flex justify-between mr-4 ">
