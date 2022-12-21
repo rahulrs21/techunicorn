@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToBasket, removeFromBasket } from "../basketSlice";
 
 function CheckoutProduct({ id, title, price, description, category, image }) {
   const dispatch = useDispatch();
+
+  const [cart, setCart] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCart(false)
+    }, 2000)
+  }, [cart])
 
   const addItemtoBasket = () => {
     const product = {
@@ -17,6 +25,8 @@ function CheckoutProduct({ id, title, price, description, category, image }) {
     };
 
     dispatch(addToBasket(product));
+
+    setCart(true)
   };
 
   const removeItemfromBasket = () => {
@@ -149,13 +159,16 @@ function CheckoutProduct({ id, title, price, description, category, image }) {
                   </span>
                 </div>
                 <div className="space-y-2 relative z-10">
-                  <button
+                  {/* <button
                     onClick={addItemtoBasket}
                     className="add_to_cart_button  px-4"
                   >
                     {" "}
                     Add to Cart{" "}
-                  </button>
+                  </button> */}
+
+<button onClick={addItemtoBasket} className={cart ? `mt-auto button_added_to_cart` : `mt-auto add_to_cart_button`}>{cart ? `Added to cart successfully` : `Add to Cart`}</button>
+
                   <button
                     onClick={removeItemfromBasket}
                     className="button_added_to_cart"
@@ -175,3 +188,4 @@ function CheckoutProduct({ id, title, price, description, category, image }) {
 }
 
 export default CheckoutProduct;
+
